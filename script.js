@@ -1,5 +1,61 @@
 function calcular() {
+let grafico = null;
 
+function dibujarGrafico(cuota, interesInicial, capital){
+
+    const labels=[
+        "Capital",
+        "Cuota",
+        "Interés"
+    ];
+
+    const datos=[
+        capital,
+        cuota,
+        interesInicial
+    ];
+
+    if(grafico){
+        grafico.destroy();
+    }
+
+    const ctx=document.getElementById("graficoCredito");
+
+    grafico=new Chart(ctx,{
+
+        type:"bar",
+
+        data:{
+
+            labels:labels,
+
+            datasets:[{
+
+                label:"Análisis Financiero",
+
+                data:datos
+
+            }]
+
+        },
+
+        options:{
+
+            responsive:true,
+
+            plugins:{
+
+                legend:{
+                    display:false
+                }
+
+            }
+
+        }
+
+    });
+
+}
     // Leer datos
     const capital = parseFloat(document.getElementById("capital").value);
     const tea = parseFloat(document.getElementById("tea").value);

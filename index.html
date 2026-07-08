@@ -3,179 +3,125 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Hipoteca Financial Auditor</title>
+<title>Hipoteca Financial Auditor Enterprise</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="container">
-<div id="dashboard">
+<div class="sidebar">
+
+    <h2>🏦 HFA</h2>
+
+    <button class="activo">Dashboard</button>
+    <button>Cronograma</button>
+    <button>Ingeniería</button>
+    <button>Auditoría</button>
+    <button>Reportes</button>
+
+</div>
+
+<div class="contenido">
+
 <header>
 
-    <div class="logo">🏦</div>
+<h1>HIPOTECA FINANCIAL AUDITOR</h1>
 
-    <h1>HIPOTECA FINANCIAL AUDITOR</h1>
-
-    <h3>Enterprise Edition 2.0</h3>
-
-    <p>
-        Ingeniería Financiera • Auditoría • Peritaje • Análisis Hipotecario
-    </p>
+<p>
+Enterprise Edition 2.0
+</p>
 
 </header>
-    <nav class="menu">
 
-    <button onclick="mostrar('dashboard')" class="activo">
-Dashboard
-</button>
-    <button>Ingeniería</button>
+<section class="formulario">
 
-    <button onclick="mostrar('auditoria')">
-Auditoría
-</button>
+<div>
 
-    <button>Gráficos</button>
+<label>Capital</label>
 
-    <button onclick="mostrar('reportes')">
-Reportes
-</button>
+<input id="capital" type="number" value="1343777.98">
 
-</nav>
-    <nav class="menu">
+</div>
 
-    <button>🏠 Dashboard</button>
+<div>
 
-    <button>📊 Cronograma</button>
+<label>TEA (%)</label>
 
-    <button>📈 Ingeniería</button>
+<input id="tea" type="number" value="14.15">
 
-    <button>🧾 Auditoría</button>
+</div>
 
-    <button>📑 Reportes</button>
+<div>
 
-    <button>⚙ Configuración</button>
+<label>Plazo</label>
 
-</nav>
+<input id="plazo" type="number" value="180">
 
-    <section class="datos">
-
-        <div class="card">
-
-            <h2>Datos del Crédito</h2>
-
-            <label>Capital (S/)</label>
-            <input type="number" id="capital" value="1343777.98">
-
-            <label>TEA (%)</label>
-            <input type="number" id="tea" value="14.15">
-
-            <label>Plazo (meses)</label>
-            <input type="number" id="plazo" value="180">
-
-            <button onclick="calcular()">
-                Calcular
-            </button>
-
-        </div>
-
-    </section>
-
-  <section class="kpis">
-
-    <div class="kpi">
-        <span>💰</span>
-        <h3>Cuota Mensual</h3>
-        <p id="cuota">-</p>
-    </div>
-
-    <div class="kpi">
-        <span>📈</span>
-        <h3>TEM</h3>
-        <p id="tem">-</p>
-    </div>
-
-    <div class="kpi">
-        <span>💵</span>
-        <h3>Valor Presente</h3>
-        <p id="vpn">-</p>
-    </div>
-
-    <div class="kpi">
-        <span>⏱</span>
-        <h3>Duración</h3>
-        <p id="duracion">-</p>
-    </div>
-
-    <div class="kpi">
-        <span>🏦</span>
-        <h3>Sistema</h3>
-        <p>Francés</p>
-    </div>
-
-    <div class="kpi">
-        <span>⚠</span>
-        <h3>Riesgo</h3>
-        <p id="riesgo">Moderado</p>
-    </div>
+</div>
 
 </section>
 
-    <section class="dictamen">
-<section class="graficos">
+<button class="calcular" onclick="calcular()">
 
-    <div class="grafico-card">
+Analizar Crédito
 
-        <h2>Evolución del Crédito</h2>
+</button>
 
-        <canvas id="graficoCredito"></canvas>
+<section class="cards">
 
-    </div>
+<div class="card">
+
+<h3>Cuota</h3>
+
+<p id="cuota">-</p>
+
+</div>
+
+<div class="card">
+
+<h3>TEM</h3>
+
+<p id="tem">-</p>
+
+</div>
+
+<div class="card">
+
+<h3>VPN</h3>
+
+<p id="vpn">-</p>
+
+</div>
+
+<div class="card">
+
+<h3>Duración</h3>
+
+<p id="duracion">-</p>
+
+</div>
 
 </section>
-        <h2>Opinión Técnica</h2>
 
-        <div id="opinion">
+<section class="dictamen">
 
-            Esperando cálculo...
+<h2>Opinión Técnica</h2>
 
-        </div>
+<div id="opinion">
 
-    </section>
-</div>
-
-<div id="cronograma" style="display:none">
-
-    <h2>📊 Cronograma de Amortización</h2>
-
-    <div id="tablaCronograma"></div>
+Esperando cálculo...
 
 </div>
 
-<div id="auditoria" style="display:none">
-
-    <h2>🧾 Auditoría Financiera</h2>
-
-    <div id="resultadoAuditoria"></div>
+</section>
 
 </div>
 
-<div id="reportes" style="display:none">
-
-    <h2>📑 Reportes</h2>
-
-    <button>📄 Descargar PDF</button>
-
-    <button>📊 Descargar Excel</button>
-
-</div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="script.js"></script>
 
 </body>

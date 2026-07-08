@@ -2,7 +2,8 @@
 // HIPOTECA FINANCIAL AUDITOR ENTERPRISE 2.0
 // =========================================
 
-function calcular() {
+function calcular()document.getElementById("cronograma").innerHTML =
+    generarCronograma(capital,tea,plazo); {
 
     // Leer datos
     const capital = parseFloat(document.getElementById("capital").value);

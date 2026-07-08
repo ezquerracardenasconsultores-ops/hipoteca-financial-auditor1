@@ -119,3 +119,48 @@ button:hover{
     line-height:1.8;
     font-size:17px;
 }
+/* ===========================
+   MENÚ SUPERIOR
+=========================== */
+
+.menu{
+
+    display:flex;
+
+    gap:15px;
+
+    justify-content:center;
+
+    margin:25px 0 35px 0;
+
+    flex-wrap:wrap;
+
+}
+
+.menu button{
+
+    background:#0f172a;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 24px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.30s;
+
+}
+
+.menu button:hover{
+
+    background:#2563eb;
+
+    transform:translateY(-3px);
+
+}

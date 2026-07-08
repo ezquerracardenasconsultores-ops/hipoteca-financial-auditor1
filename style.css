@@ -164,3 +164,93 @@ button:hover{
     transform:translateY(-3px);
 
 }
+/*==================================================*/
+/*                  HEADER                           */
+/*==================================================*/
+
+.logo{
+
+    font-size:60px;
+
+    margin-bottom:15px;
+
+}
+
+header h3{
+
+    margin-top:10px;
+
+    color:#60a5fa;
+
+    font-weight:400;
+
+}
+
+header p{
+
+    margin-top:15px;
+
+    font-size:17px;
+
+}
+
+
+/*==================================================*/
+/*                    MENU                           */
+/*==================================================*/
+
+.menu{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin:30px 0;
+
+    flex-wrap:wrap;
+
+}
+
+.menu button{
+
+    background:white;
+
+    color:#0f172a;
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:14px 24px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    transition:.30s;
+
+}
+
+.menu button:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+    transform:translateY(-3px);
+
+}
+
+.activo{
+
+    background:#2563eb !important;
+
+    color:white !important;
+
+}

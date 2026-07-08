@@ -325,3 +325,40 @@ body{
 }
 
 }
+.tabla{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:30px;
+
+    background:white;
+
+}
+
+.tabla th{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:12px;
+
+}
+
+.tabla td{
+
+    padding:10px;
+
+    border-bottom:1px solid #ddd;
+
+    text-align:center;
+
+}
+
+.tabla tr:hover{
+
+    background:#f3f4f6;
+
+}

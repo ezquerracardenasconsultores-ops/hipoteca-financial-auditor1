@@ -135,3 +135,13 @@ function dibujarGrafico(cuota, interesInicial, capital){
         mercado y revisar el cronograma contractual completo.
     `;
 }
+function mostrar(seccion){
+
+    document.getElementById("dashboard").style.display="none";
+    document.getElementById("cronograma").style.display="none";
+    document.getElementById("auditoria").style.display="none";
+    document.getElementById("reportes").style.display="none";
+
+    document.getElementById(seccion).style.display="block";
+
+}

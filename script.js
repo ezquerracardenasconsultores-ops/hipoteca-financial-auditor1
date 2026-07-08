@@ -106,3 +106,94 @@ históricas de la SBS.
 `;
 
 }
+function dashboard(){
+
+document.getElementById("vista").innerHTML=`
+
+<section class="formulario">
+
+<div>
+
+<label>Capital</label>
+
+<input id="capital" type="number" value="1343777.98">
+
+</div>
+
+<div>
+
+<label>TEA (%)</label>
+
+<input id="tea" type="number" value="14.15">
+
+</div>
+
+<div>
+
+<label>Plazo</label>
+
+<input id="plazo" type="number" value="180">
+
+</div>
+
+</section>
+
+<button class="calcular" onclick="calcular()">
+
+Analizar Crédito
+
+</button>
+
+<section class="cards">
+
+<div class="card">
+
+<h3>Cuota</h3>
+
+<p id="cuota">-</p>
+
+</div>
+
+<div class="card">
+
+<h3>TEM</h3>
+
+<p id="tem">-</p>
+
+</div>
+
+<div class="card">
+
+<h3>VPN</h3>
+
+<p id="vpn">-</p>
+
+</div>
+
+<div class="card">
+
+<h3>Duración</h3>
+
+<p id="duracion">-</p>
+
+</div>
+
+</section>
+
+<section class="dictamen">
+
+<h2>Opinión Técnica</h2>
+
+<div id="opinion">
+
+Esperando cálculo...
+
+</div>
+
+</section>
+
+`;
+
+}
+
+dashboard();

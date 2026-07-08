@@ -1,4 +1,4 @@
-function calcular() {
+function calcular() 
 let grafico = null;
 
 function dibujarGrafico(cuota, interesInicial, capital){
